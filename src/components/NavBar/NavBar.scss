@@ -1,0 +1,33 @@
+.navbar {
+  border: 1px solid black;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: blueviolet;
+  width: 100%;
+}
+
+.navbar > * {
+  margin: 0 5px;
+}
+
+.navbar-item {
+  padding: 15px;
+}
+
+.navbar-item:hover {
+background-color: white;
+border-radius: 5px;
+}
+
+.navbar-item .selected {
+  background-color: rgb(173, 110, 231);
+  border-radius: 5px;
+  }
+
+  .navbar-fixed {
+    background-color: red;
+    position: fixed;
+    top: 0;
+  }

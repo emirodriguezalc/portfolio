@@ -1,13 +1,16 @@
 import React from 'react';
+import './Projects.scss'
 
 interface Props {
-  title: string,
+  title?: string,
 }
 
 export const Projects: React.FC<Props> = () => {
   return (
-    <section className="Projects">
+    <section className="Projects" id="projects">
       
     </section>
   )
 }
+
+export default Projects;
