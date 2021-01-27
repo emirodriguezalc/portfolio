@@ -7,8 +7,9 @@ interface Props {
 
 const Skills: React.FC<Props> = () => {
   return (
-    <section className="Contact" id="contact">
-      Contact
+    <section className="Contact-container">
+      <div id="contact" className="content-placeholder" />
+      <section className="Contact">Contact</section>
     </section>
   );
 };

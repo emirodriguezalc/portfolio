@@ -7,8 +7,9 @@ interface Props {
 
 export const Projects: React.FC<Props> = () => {
   return (
-    <section className="Projects" id="projects">
-      Projects
+    <section className="Projects-container">
+      <div className="content-placeholder" id="projects" />
+      <section className="Projects">Projects</section>
     </section>
   );
 };
