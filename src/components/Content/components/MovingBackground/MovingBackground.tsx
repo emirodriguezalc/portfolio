@@ -1,16 +1,16 @@
 import React from 'react';
-import './MovingBackground.scss'
+import './MovingBackground.scss';
 
 interface Props {
-  title?: string,
+  title?: string;
 }
 
-export const MovingBackground: React.FC<Props> = () => {
+const MovingBackground: React.FC<Props> = () => {
   return (
     <section className="MovingBackground" id="movingBackground">
-      
+      <p>Hello</p>
     </section>
-  )
-}
+  );
+};
 
 export default MovingBackground;

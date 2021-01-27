@@ -1,16 +1,16 @@
 import React from 'react';
-import './About.scss'
+import './About.scss';
 
 interface Props {
-  title?: string,
+  title?: string;
 }
 
 export const About: React.FC<Props> = () => {
   return (
     <section className="About" id="about">
-      <div> About section</div>
+      <h2>Full stack web developer</h2>
     </section>
-  )
-}
+  );
+};
 
 export default About;
