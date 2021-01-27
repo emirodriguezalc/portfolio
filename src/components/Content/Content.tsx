@@ -4,7 +4,6 @@ import MovingBackground from './components/MovingBackground/MovingBackground';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
-import './Content.scss';
 
 interface Props {}
 

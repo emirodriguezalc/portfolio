@@ -7,7 +7,9 @@ interface Props {
 
 const Skills: React.FC<Props> = () => {
   return (
-      <section className="Skills">Skills</section>
+    <section className="Skills" id="skills">
+      Skills
+    </section>
   );
 };
 

@@ -5,13 +5,12 @@ interface Props {
   title?: string;
 }
 
-const Skills: React.FC<Props> = () => {
+const Contact: React.FC<Props> = () => {
   return (
-    <section className="Contact-container">
-      <div id="contact" className="content-placeholder" />
-      <section className="Contact">Contact</section>
+    <section className="Contact" id="contact">
+      Contact
     </section>
   );
 };
 
-export default Skills;
+export default Contact;
