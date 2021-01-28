@@ -6,13 +6,25 @@ interface Props {
 }
 
 export const About: React.FC<Props> = () => {
+  const imageSrc = [
+    '/assets/html-css-js-icon.png',
+    '/assets/node-icon.png',
+    '/assets/react-icon.png',
+    '/assets/express-icon.png',
+    '/assets/rest-api-icon.png',
+    '/assets/regex-icon.png',
+    '/assets/webpack-icon.png',
+    '/assets/mongodb-icon.png',
+    '/assets/postgresql-icon.png',
+  ];
+
   return (
     <section className="About">
       <div id="about" className="content-placeholder" />
       <h1 className="about-title">Name Anothername</h1>
       <h2 className="about-subtitle">FULL STACK WEB DEVELOPER</h2>
       <section className="about-info">
-        <section className="about-info__text">
+        <section className="about-info__container">
           <h3>Text about me</h3>
           <p>
             <br />
@@ -28,61 +40,13 @@ export const About: React.FC<Props> = () => {
             <br />
           </p>
         </section>
-        <section className="about-info__stack">
+        <section className="about-info__container">
           <h3>Stack</h3>
           <br />
-          <img
-            className="about-info__stack-image"
-            src="/assets/html-css-js-icon.png"
-            alt=""
-          />
-          <div className="about-info__stack-image__container">
-            <img
-              className="about-info__stack-image"
-              src="/assets/node-icon.png"
-              alt=""
-            />
-            <img
-              className="about-info__stack-image"
-              src="/assets/react-icon.png"
-              alt=""
-            />
-          </div>
-          <div className="about-info__stack-image__container">
-            <img
-              className="about-info__stack-image"
-              src="/assets/express-icon.png"
-              alt=""
-            />
-            <img
-              className="about-info__stack-image"
-              src="/assets/rest-api-icon.png"
-              alt=""
-            />
-          </div>
-          <div className="about-info__stack-image__container">
-            <img
-              className="about-info__stack-image"
-              src="/assets/regex-icon.png"
-              alt=""
-            />
-            <img
-              className="about-info__stack-image"
-              src="/assets/webpack-icon.png"
-              alt=""
-            />
-          </div>
-          <div className="about-info__stack-image__container">
-            <img
-              className="about-info__stack-image"
-              src="/assets/mongodb-icon.png"
-              alt=""
-            />
-            <img
-              className="about-info__stack-image"
-              src="/assets/postgresql-icon.png"
-              alt=""
-            />
+          <div className="about-info__stack">
+            {imageSrc.map((item) => (
+              <img className="about-info__stack-image" src={item} alt="" />
+            ))}
           </div>
         </section>
       </section>
