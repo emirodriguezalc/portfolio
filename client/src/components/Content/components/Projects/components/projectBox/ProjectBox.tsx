@@ -4,7 +4,7 @@ import './ProjectBox.scss';
 interface Props {}
 
 export const ProjectBox: React.FC<Props> = () => {
-  const [cardState, setCardState] = useState(true);
+  const [cardState, setCardState] = useState(false);
   const [flipState, setFlipState] = useState(false);
 
   const flipCard = (state: boolean) => {
