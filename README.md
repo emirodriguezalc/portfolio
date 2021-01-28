@@ -20,7 +20,7 @@ npm install
 
 ```
 
-#### 2. From root directory: CD into client, install, CD out of client
+#### 2. From root directory: CD into client, install, CD out of client:
 
 In the terminal:
 
@@ -54,7 +54,7 @@ cd ..
 
 ```
 
-#### 3. From root directory: CD into server and install:
+#### 3. From root directory: CD into server, install, CD out of server:
 
 ```bash
 
