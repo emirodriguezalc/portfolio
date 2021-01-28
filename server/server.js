@@ -24,13 +24,14 @@ const transporter = nodemailer.createTransport({
 
 transporter.verify((err, success) => {
   if (err) console.error(err);
-  console.log('Server is ready to send emails');
+  if (success) console.log('Server is ready to send emails');
 });
 
 app.post('/api/send/email', (req, res) => {
-  let form = new multiparty.Form();
-  let data = {};
+  const form = new multiparty.Form();
+  const data = {};
   form.parse(req, (err, fields) => {
+    if (err) console.error(`There was an error: ${err}`);
     console.log(fields);
     Object.keys(fields).forEach((property) => {
       data[property] = fields[property].toString();
@@ -43,12 +44,13 @@ app.post('/api/send/email', (req, res) => {
       text: `${data.name} <${data.email}> ${data.message}`,
     };
 
-    transporter.sendMail(email, (err, data) => {
+    transporter.sendMail(email, (err2, data2) => {
       console.log(email);
-      if (err) {
-        console.log(err);
-        res.status(500).send(`Email could not be sent: ${err}`);
-      } else res.status(200).send('Email successfully sent to recipient');
+      if (err2) {
+        console.log(err2);
+        res.status(500).send(`Email could not be sent: ${err2}`);
+      } else if (data2)
+        res.status(200).send('Email successfully sent to recipient');
     });
   });
 });
