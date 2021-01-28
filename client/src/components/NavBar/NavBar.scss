@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: transparent;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  // border: 1px solid black;
+}
+
+.navbar-item {
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.20);
+  border-radius: 5px;
+}
+
+.navbar-item .selected {
+  background-color: rgb(173, 110, 231);
+  border-radius: 5px;
+}
+
+.navbar-fixed {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  animation: fadeinNav 0.3s ease;
+  z-index: 1;
+}
+
+.navbar-fixed > * {
+  color: black;
+}
+
+.navbar-fixed > *:hover {
+  background-color: rgba(0,0,0, 0.20);
+}
+
+@keyframes fadeinNav {
+  from {
+    height: 0;
+  }
+  to {
+    height: 50px;
+  }
+}
