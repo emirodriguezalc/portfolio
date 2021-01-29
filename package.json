@@ -25,6 +25,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "heroku": "^7.47.11",
+    "nodemailer": "^6.4.17",
     "path": "^0.12.7",
     "react-card-flip": "^1.0.11",
     "serve": "^11.3.2"
