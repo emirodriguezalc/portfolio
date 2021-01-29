@@ -5,6 +5,7 @@ import multiparty from 'multiparty';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -21,8 +22,10 @@ app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/build'));
-  app.get('/*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+  app.get('*', (req, res) => {
+    res.sendFile(
+      path.resolve(__dirname, '..', 'client', 'build', 'index.html'),
+    );
   });
 }
 
