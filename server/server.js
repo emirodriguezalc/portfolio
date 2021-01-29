@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
 import multiparty from 'multiparty';
 import dotenv from 'dotenv';
+import path from 'path';
 
 dotenv.config();
 
@@ -11,6 +12,16 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('*', (request, response) => {
+
+  response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  
+   });
+  
+  });
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
