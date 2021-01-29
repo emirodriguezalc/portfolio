@@ -1,0 +1,38 @@
+.project-container-media {
+  width: 33vh;
+}
+
+.project-container-media.back{
+  filter: blur(4px);
+}
+
+.project-back {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-button {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  border: 2px solid aqua;
+  color: aqua;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 5vh;
+  z-index: 100;
+}
+
+.project-button.github {
+  top: 15vh;
+}
+
+.project-button-icon {
+  width: 15px;
+  filter: invert(1);
+  margin-left: 5px;
+}
