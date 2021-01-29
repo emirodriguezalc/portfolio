@@ -55,7 +55,9 @@ const Contact: React.FC<Props> = () => {
           placeholder="Message*"
           className="contact-form-textarea"
         />
-        <button className="contact-form-button" type="submit">Send email</button>
+        <button className="contact-form-button" type="submit">
+          Send email
+        </button>
       </form>
     </section>
   );
