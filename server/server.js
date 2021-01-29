@@ -15,13 +15,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('*', (request, response) => {
-
-  response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  
-   });
-  
-  });
+app.use(bodyParser.urlencoded({extended: true}));
+//Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
