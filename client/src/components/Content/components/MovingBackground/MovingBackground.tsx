@@ -16,8 +16,9 @@ const MovingBackground: React.FC<Props> = () => {
           loop
           autoPlay
         />
+        <h1 className="movingBackground-title">Emilia Rodriguez Gimenez</h1>
+        <h2 className="movingBackground-subtitle">Full stack developer</h2>
       </div>
-      <p>Hello</p>
     </section>
   );
 };
