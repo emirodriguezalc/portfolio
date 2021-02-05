@@ -26,7 +26,7 @@ export const NavBar: React.FC<Props> = () => {
 
   return (
     <nav className="navbar">
-      <a href="#movingBackground" className="navbar-item">
+      <a href="#header" className="navbar-item">
         Home
       </a>
       <a href="#about" className="navbar-item">

@@ -18,7 +18,7 @@ const Skills: React.FC<Props> = () => {
     '/assets/postgresql-icon.png',
   ]; */
   return (
-    <section className="Skills">
+    <section className="Skills" id="skills">
       {/*       <div id="skills" className="content-placeholder" />
       Skills
       <br />
