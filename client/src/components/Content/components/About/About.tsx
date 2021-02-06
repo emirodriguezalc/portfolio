@@ -7,16 +7,18 @@ interface Props {
 
 export const About: React.FC<Props> = () => {
   return (
-    <section className="About" id="about">
-      <h3 className="about-title">Front end focused, full stack experience</h3>
+    <section className="About" id="header">
+      <h2 className="about-title">Front end focused, full stack experience</h2>
       <p className="about-paragraph">
         I am a full stack developer based in europe, looking for new challenges. Informatics
         engeneering student, and former architecture student.
       </p>
+      <br />
       <p className="about-paragraph">
         I have serious passion for creating intuitive, dynamic user experiences. I know that my
         work can make a difference.
       </p>
+      <br />
       <p className="about-paragraph">(forever) Learning how to write cleaner and more reusable code.</p>
     </section>
   );

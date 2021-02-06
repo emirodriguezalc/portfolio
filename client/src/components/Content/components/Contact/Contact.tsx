@@ -19,6 +19,8 @@ const Contact: React.FC<Props> = () => {
     if (form instanceof HTMLFormElement) {
       const email = new FormData(form);
       sendEmail(email);
+      form.reset();
+      alert('Form submitted');
     }
     return form;
   };
@@ -26,7 +28,7 @@ const Contact: React.FC<Props> = () => {
   return (
     <section className="Contact">
       <div id="contact" className="content-placeholder" />
-      Contact
+      <h1 className="contact-title">Let&#39;s get in touch!</h1>
       <form
         id="contact-form"
         className="contact-form"
@@ -56,7 +58,7 @@ const Contact: React.FC<Props> = () => {
           className="contact-form-textarea"
         />
         <button className="contact-form-button" type="submit">
-          Send email
+          Send me!
         </button>
       </form>
     </section>

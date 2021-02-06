@@ -2,15 +2,23 @@
 import React, { useState } from 'react';
 import './ProjectBox.scss';
 import ReactCardFlip from 'react-card-flip';
+import ModalVideo from 'react-modal-video';
 
 interface Props {
-  mediaSrc:string,
-  sourceCodeLink:string,
-  gifs:string
+  title: string;
+  mediaSrc: string;
+  sourceCodeLink: string;
+  gifs: string;
 }
 
-export const ProjectBox: React.FC<Props> = ({ mediaSrc, sourceCodeLink, gifs }) => {
+export const ProjectBox: React.FC<Props> = ({
+  title,
+  mediaSrc,
+  sourceCodeLink,
+  gifs,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -19,25 +27,32 @@ export const ProjectBox: React.FC<Props> = ({ mediaSrc, sourceCodeLink, gifs }) 
 
   return (
     <section className="project-container">
+      <h1 className="project-container-title">{title}</h1>
+      <ModalVideo
+        channel="custom"
+        autoplay
+        isOpen={isOpen}
+        url={gifs}
+        onClose={() => setOpen(false)}
+      />
       <ReactCardFlip isFlipped={isFlipped}>
         <article role="presentation" onClick={handleClick} className="project-front">
-          <img
-            // src="/assets/projects/hamster-project-2.jpg"
-            src={mediaSrc}
-            className="project-container-media"
-            alt=""
-          />
+          <img src={mediaSrc} className="project-container-media" alt="" />
         </article>
         <article role="presentation" onClick={handleClick} className="project-back">
-          <img
-            src={mediaSrc}
-            className="project-container-media back"
-            alt=""
-          />
-          <button type="button" className={`project-button ${gifs}`}>
+          <img src={mediaSrc} className="project-container-media back" alt="" />
+          <button
+            type="button"
+            className={`project-button ${gifs}`}
+            onClick={() => setOpen(true)}
+          >
             Take a look
           </button>
-          <button type="button" onClick={() => window.open(sourceCodeLink)} className="project-button github">
+          <button
+            type="button"
+            onClick={() => window.open(sourceCodeLink)}
+            className="project-button github"
+          >
             Go to source code
             <img
               src="/assets/projects/github.png"

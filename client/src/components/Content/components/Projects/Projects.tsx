@@ -1,5 +1,6 @@
 import React from 'react';
 import './Projects.scss';
+
 import ProjectBox from './components/projectBox/ProjectBox';
 
 interface Props {
@@ -9,28 +10,36 @@ interface Props {
 export const Projects: React.FC<Props> = () => {
   const fakeData = [
     {
-      mediaSrc: '/assets/projects/hamster-project-1.jpg',
+      title: 'Simple todo list',
+      mediaSrc: '/assets/projects/todo-th.png',
       sourceCodeLink: 'https://github.com/emirodriguezalc/todo-list',
-      gifs: 'this is supposed to be a video',
+      gifs: '/assets/projects/todo-list-demo.mp4',
     },
     {
-      mediaSrc: '/assets/projects/hamster-project-2.jpg',
+      title: 'Find your dream car',
+      mediaSrc: '/assets/projects/dream-car-th.png',
       sourceCodeLink: 'https://github.com/emirodriguezalc/dream-car',
-      gifs: 'this is supposed to be a video',
+      gifs: '/assets/projects/dream-car-demo.mp4',
     },
     {
-      mediaSrc: '/assets/projects/hamster-project-3.jpg',
+      title: 'Gay pokedex',
+      mediaSrc: '/assets/projects/pokedex-th.png',
       sourceCodeLink: 'https://github.com/emirodriguezalc/pokedex',
-      gifs: 'this is supposed to be a video',
+      gifs: '/assets/projects/gay-pokedex-demo.mp4',
     },
   ];
   return (
     <section className="Projects">
       <div id="projects" className="content-placeholder" />
-      <h1>Projects</h1>
-      <section>
+      <h1 className="projects-title">Projects</h1>
+      <section className="projects-list">
         {fakeData.map((e) => (
-          <ProjectBox mediaSrc={e.mediaSrc} sourceCodeLink={e.sourceCodeLink} gifs={e.gifs} />
+          <ProjectBox
+            mediaSrc={e.mediaSrc}
+            title={e.title}
+            sourceCodeLink={e.sourceCodeLink}
+            gifs={e.gifs}
+          />
         ))}
       </section>
     </section>

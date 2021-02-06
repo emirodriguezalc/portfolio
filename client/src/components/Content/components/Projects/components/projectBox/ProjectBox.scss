@@ -1,5 +1,11 @@
 .project-container-media {
-  width: 33vh;
+  width: 45vh;
+  height: 25vh;
+  overflow: hidden;
+}
+
+.project-container {
+  margin: 3vw;
 }
 
 .project-container-media.back{
@@ -35,4 +41,9 @@
   width: 15px;
   filter: invert(1);
   margin-left: 5px;
+}
+
+.project-container-title {
+  font-size: 1rem;
+  padding-bottom: 5vh;
 }
